@@ -1,10 +1,5 @@
-//
-//  Logging.swift
-//  LoggingFramework1
-//
-//  Created by Eli on 08/08/2018.
-//  Copyright © 2018 Eli. All rights reserved.
-//
+
+
 
 import Foundation
 
@@ -24,4 +19,3 @@ public class Logging {
         print("Test Class Method")
     }
 }
-
