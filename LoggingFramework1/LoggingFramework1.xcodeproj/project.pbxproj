@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		45383D11211B50AF00CA62F5 /* LoggingFramework1.h in Headers */ = {isa = PBXBuildFile; fileRef = 45383D0F211B50AF00CA62F5 /* LoggingFramework1.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45383D18211B512A00CA62F5 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45383D17211B512A00CA62F5 /* Logging.swift */; };
+		8204D1FB5C60D4607E578B2F /* Pods_LoggingFramework1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE512EEF85605163286C5FD /* Pods_LoggingFramework1.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,9 @@
 		45383D0F211B50AF00CA62F5 /* LoggingFramework1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoggingFramework1.h; sourceTree = "<group>"; };
 		45383D10211B50AF00CA62F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45383D17211B512A00CA62F5 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		99F993F8E12FEA7F57545D87 /* Pods-LoggingFramework1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoggingFramework1.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoggingFramework1/Pods-LoggingFramework1.release.xcconfig"; sourceTree = "<group>"; };
+		B9C021CAE7FB7967455DF942 /* Pods-LoggingFramework1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoggingFramework1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoggingFramework1/Pods-LoggingFramework1.debug.xcconfig"; sourceTree = "<group>"; };
+		BAE512EEF85605163286C5FD /* Pods_LoggingFramework1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoggingFramework1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8204D1FB5C60D4607E578B2F /* Pods_LoggingFramework1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +39,8 @@
 			children = (
 				45383D0E211B50AF00CA62F5 /* LoggingFramework1 */,
 				45383D0D211B50AF00CA62F5 /* Products */,
+				A895A269AD0A40FA21C25ED1 /* Pods */,
+				F27C7E299D173AF3F0981106 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +62,23 @@
 			path = LoggingFramework1;
 			sourceTree = "<group>";
 		};
+		A895A269AD0A40FA21C25ED1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9C021CAE7FB7967455DF942 /* Pods-LoggingFramework1.debug.xcconfig */,
+				99F993F8E12FEA7F57545D87 /* Pods-LoggingFramework1.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F27C7E299D173AF3F0981106 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAE512EEF85605163286C5FD /* Pods_LoggingFramework1.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -73,6 +97,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45383D14211B50AF00CA62F5 /* Build configuration list for PBXNativeTarget "LoggingFramework1" */;
 			buildPhases = (
+				BC309473D14C5797E9452975 /* [CP] Check Pods Manifest.lock */,
 				45383D07211B50AF00CA62F5 /* Sources */,
 				45383D08211B50AF00CA62F5 /* Frameworks */,
 				45383D09211B50AF00CA62F5 /* Headers */,
@@ -128,6 +153,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BC309473D14C5797E9452975 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoggingFramework1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		45383D07211B50AF00CA62F5 /* Sources */ = {
@@ -263,6 +309,7 @@
 		};
 		45383D15211B50AF00CA62F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9C021CAE7FB7967455DF942 /* Pods-LoggingFramework1.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -290,6 +337,7 @@
 		};
 		45383D16211B50AF00CA62F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99F993F8E12FEA7F57545D87 /* Pods-LoggingFramework1.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
